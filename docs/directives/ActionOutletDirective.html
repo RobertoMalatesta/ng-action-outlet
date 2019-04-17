@@ -64,15 +64,14 @@
             <p class="comment">
                 <p>Structural directive used for rendering actions to the DOM.
 It compiles and attaches the action components <strong>dinamically</strong> on the fly</p>
-<p>The <code>@Input</code> is always an action derived from <code>AbstractAction</code> class, e.g.:</p>
-<ul>
-<li><code>ActionButton</code>: will render one button action</li>
-<li><code>ActionGroup</code>: will render one group action and all descendant actions</li>
-<li><code>ActionToggle</code>: will render one toggle action</li>
-</ul>
+<p>The <code>@Input</code> is always an action derived from <code>AbstractAction</code> class, e.g.:
+- <code>ActionButton</code>: will render one button action
+- <code>ActionGroup</code>: will render one group action and all descendant actions
+- <code>ActionToggle</code>: will render one toggle action</p>
 <h2 id="example">Example</h2>
-<p><strong>TypeScript</strong></p>
-<div><pre class="line-numbers"><code class="language-typescript"> * this.group = new ActionGroup({
+<p><strong>TypeScript</strong>
+<code>typescript
+ * this.group = new ActionGroup({
  *     children: [
  *         new ActionButton({
  *             title: &#39;Action Title&#39;,
@@ -81,16 +80,19 @@ It compiles and attaches the action components <strong>dinamically</strong> on t
  *         })
  *     ]
  * });
- *</code></pre></div><p><strong>Template</strong></p>
-<div><pre class="line-numbers"><code class="language-html"> * &lt;div *actionOutlet=&quot;group&quot;&gt;&lt;/div&gt;
- *</code></pre></div>
+ *</code></p>
+<p><strong>Template</strong>
+<code>html
+ * &lt;div *actionOutlet=&quot;group&quot;&gt;&lt;/div&gt;
+ *</code></p>
+
             </p>
 
             <p class="comment">
                 <h3>Implements</h3>
             </p>
             <p class="comment">
-                        <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+                            <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
             </p>
 
 
@@ -202,7 +204,7 @@ It compiles and attaches the action components <strong>dinamically</strong> on t
                                                         <td>viewContainerRef</td>
                                                   
                                                         <td>
-                                                                    <code><a href="https://angular.io/api/core/ViewContainerRef" target="_blank" >ViewContainerRef</a></code>
+                                                                        <code><a href="https://angular.io/api/core/ViewContainerRef" target="_blank" >ViewContainerRef</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -218,7 +220,7 @@ It compiles and attaches the action components <strong>dinamically</strong> on t
                                                         <td>componentFactoryResolver</td>
                                                   
                                                         <td>
-                                                                    <code><a href="https://angular.io/api/core/ComponentFactoryResolver" target="_blank" >ComponentFactoryResolver</a></code>
+                                                                        <code><a href="https://angular.io/api/core/ComponentFactoryResolver" target="_blank" >ComponentFactoryResolver</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -234,7 +236,7 @@ It compiles and attaches the action components <strong>dinamically</strong> on t
                                                         <td>injector</td>
                                                   
                                                         <td>
-                                                                    <code><a href="https://angular.io/api/core/Injector" target="_blank" >Injector</a></code>
+                                                                        <code><a href="https://angular.io/api/core/Injector" target="_blank" >Injector</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -272,11 +274,9 @@ It compiles and attaches the action components <strong>dinamically</strong> on t
                     <td class="col-md-4">
                         <div class="io-description"><p>Action setter, providing action, to be rendered in the component&#39;s view container.
 <em>e.g. <code>ActionButton</code>, <code>ActionGroup</code>, etc.</em></p>
-<p>On set, it will:</p>
-<ul>
-<li><strong>Compile</strong> and render a <code>Component</code> <strong>dinamically</strong> for provided <code>@Input</code> action</li>
-<li><strong>Change/Update</strong> the <code>Component</code> accordingly to the change detection</li>
-</ul>
+<p>On set, it will:
+- <strong>Compile</strong> and render a <code>Component</code> <strong>dinamically</strong> for provided <code>@Input</code> action
+- <strong>Change/Update</strong> the <code>Component</code> accordingly to the change detection</p>
 </div>
                     </td>
                 </tr>
@@ -315,105 +315,105 @@ If <code>false</code>, destruction of action should be handled <strong>MANUALLY<
 
             <section>
     
-        <h3 id="methods">
-            Methods
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="getComponentType"></a>
-                        <span class="name">
-                            <b>
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getComponentType"></a>
+                    <span class="name">
+                        <b>
                             getComponentType
-                            </b>
-                            <a href="#getComponentType"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
+                        </b>
+                        <a href="#getComponentType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
 <code>getComponentType(action: <a href="../undefineds/AnyAction.html">AnyAction</a>, injector: <a href="https://angular.io/api/core/Injector" target="_blank">Injector</a>)</code>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="137" class="link-to-prism">projects/core/src/lib/action-outlet.directive.ts:137</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="137"
+                            class="link-to-prism">projects/core/src/lib/action-outlet.directive.ts:137</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
-                            <div class="io-description"><p>Will return the <code>Component</code> type for provided action
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Will return the <code>Component</code> type for provided action
 If action <strong>has</strong> directly assigned <code>Component</code> type via <code>constructor</code>, then that component is <strong>forced</strong> and used
 If action <strong>does not have</strong> directly assigned <code>Component</code> type via <code>constructor</code>, <code>Injector</code> is used to fetch proper <code>Component</code></p>
 </div>
 
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                                    <td>Description</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>action</td>
-                                                        <td>
-                                                                    <code><a href="../miscellaneous/typealiases.html#AnyAction" target="_self" >AnyAction</a></code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>action</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#AnyAction" target="_self" >AnyAction</a></code>
+                                    </td>
 
-                                                        <td>
-                                                                <p>Action to get <code>Component</code> for</p>
+                                    <td>
+                                        No
+                                    </td>
 
-                                                        </td>
-                                                </tr>
-                                                <tr>
-                                                        <td>injector</td>
-                                                        <td>
-                                                                    <code><a href="https://angular.io/api/core/Injector" target="_blank" >Injector</a></code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
 
-                                                        <td>
-                                                                <p><code>Injector</code> from current directive instance</p>
+                                    <td>
+                                        <p>Action to get <code>Component</code> for</p>
 
-                                                        </td>
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="../interfaces/ActionAbstractComponentImpl.html" target="_self" >Type&lt;ActionAbstractComponentImpl&gt;</a></code>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>injector</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/core/Injector" target="_blank" >Injector</a></code>
+                                    </td>
 
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p><code>Injector</code> from current directive instance</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/ActionAbstractComponentImpl.html" target="_self" >Type&lt;ActionAbstractComponentImpl&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>
-
 
             <section>
     <h3 id="accessors">
@@ -444,7 +444,7 @@ If action <strong>does not have</strong> directly assigned <code>Component</code
 </div>
 
                                 <div class="io-description">
-                                    <b>Returns : </b>    <code><a href="../miscellaneous/typealiases.html#AnyAction" target="_self" >AnyAction</a></code>
+                                    <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#AnyAction" target="_self" >AnyAction</a></code>
 
                                 </div>
                         </td>
@@ -464,11 +464,9 @@ If action <strong>does not have</strong> directly assigned <code>Component</code
                         <td class="col-md-4">
                                 <div class="io-description"><p>Action setter, providing action, to be rendered in the component&#39;s view container.
 <em>e.g. <code>ActionButton</code>, <code>ActionGroup</code>, etc.</em></p>
-<p>On set, it will:</p>
-<ul>
-<li><strong>Compile</strong> and render a <code>Component</code> <strong>dinamically</strong> for provided <code>@Input</code> action</li>
-<li><strong>Change/Update</strong> the <code>Component</code> accordingly to the change detection</li>
-</ul>
+<p>On set, it will:
+- <strong>Compile</strong> and render a <code>Component</code> <strong>dinamically</strong> for provided <code>@Input</code> action
+- <strong>Change/Update</strong> the <code>Component</code> accordingly to the change detection</p>
 </div>
 
                                 <div class="io-description">
@@ -496,7 +494,7 @@ If action <strong>does not have</strong> directly assigned <code>Component</code
                                 <div>
                                 </div>
                                 <div class="io-description">
-                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                                    <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                                 </div>
                         </td>
@@ -646,7 +644,7 @@ export class ActionOutletDirective implements OnDestroy {
      * @param injector &#x60;Injector&#x60; from current directive instance
      */
     getComponentType(action: AnyAction, injector: Injector): Type&lt;ActionAbstractComponentImpl&gt; {
-        return action.getForcedComponent() || &lt;Type&lt;ActionAbstractComponentImpl&gt;&gt;injector.get(action.constructor);
+        return action.getForcedComponent() || &lt;Type&lt;ActionAbstractComponentImpl&gt;&gt;injector.get&lt;any&gt;(&lt;any&gt;action.constructor);
     }
 }
 </code></pre>
